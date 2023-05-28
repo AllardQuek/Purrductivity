@@ -1,0 +1,10 @@
+/* filename: content.css */
+.ssh-pet {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 1000;
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat.png");
+  background-size: 30px 30px;
+  background-position: 0 0;
+}
