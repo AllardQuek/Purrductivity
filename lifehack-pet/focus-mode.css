@@ -1,0 +1,26 @@
+/* Google */
+body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
+main > :not(:last-child),
+main > :last-child > navigation-tree,
+main .toc-container {
+  display: none;
+}
+
+/* Medium */
+.p.q.r.ab.ac,
+.tj.ab.jj.ia.tk.tl.tm.tn.to.tp.tq.tr.ts.tt.tu.tv.tw.tx.ty {
+  display: none;
+}
+
+/* Straits Times */
+.ob-widget-items-container,
+#smartbanner,
+#header-description,
+.bannerbox-area {
+  display: none;
+}
+
+main > :last-child {
+  margin-top: min(10vmax, 10rem);
+  margin-bottom: min(10vmax, 10rem);
+}

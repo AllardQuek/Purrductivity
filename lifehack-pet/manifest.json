@@ -2,11 +2,19 @@
   "manifest_version": 3,
   "name": "Lifehack Browser Pet",
   "description": "Display pet in browser",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
   "version": "1.0",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": ["scripts/content.js"],
       "css": ["content.css"],
       "run_at": "document_start",
       "all_frames": true
@@ -17,5 +25,22 @@
       "resources": ["/images/*"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "permissions": ["activeTab", "scripting"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      },
+      "description": "Inject a script on the page"
+    }
+  }
 }

@@ -24,3 +24,7 @@
   position: fixed;
   animation: move-back-and-forth 3s linear infinite;
 }
+
+.reading-time {
+  color: #666;
+}
