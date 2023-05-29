@@ -8,7 +8,7 @@ We were inspired by Google Colab's [Kitty mode](https://twitter.com/i/status/114
 ## How To Set Up
 
 - Documentation to run the code locally from Google [here](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
-- ![Setup](doc-image/1.png)
+<img src="doc-image/1.png" width="700">
 
 ## What it does
 1. Chat GPT Integration
