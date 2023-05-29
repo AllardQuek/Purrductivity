@@ -1,8 +1,22 @@
+// Comment out top so it wont affect y axis 
+function setRandomPosition(element) {
+  const screenWidth = window.innerWidth;
+  // const screenHeight = window.innerHeight;
+  const left = Math.random() * (screenWidth - element.offsetWidth);
+  // const top = Math.random() * (screenHeight - element.offsetHeight);
+
+  element.style.left = left + "px";
+  // element.style.top = top + "px";
+}
+
 // * Show pet
 function onload() {
   const pet = document.createElement("div");
   pet.classList.add("pet");
   document.body.appendChild(pet);
+  const petElement = document.querySelector(".pet");
+  // Set the initial random position for the pet
+  setRandomPosition(petElement);
 
   // * Reading time
   let article = document.querySelector("article");
