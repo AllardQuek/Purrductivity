@@ -1,11 +1,12 @@
+// Comment out top so it wont affect y axis 
 function setRandomPosition(element) {
   const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
+  // const screenHeight = window.innerHeight;
   const left = Math.random() * (screenWidth - element.offsetWidth);
-  const top = Math.random() * (screenHeight - element.offsetHeight);
+  // const top = Math.random() * (screenHeight - element.offsetHeight);
 
   element.style.left = left + "px";
-  element.style.top = top + "px";
+  // element.style.top = top + "px";
 }
 
 // * Show pet
