@@ -1,4 +1,4 @@
-// Comment out top so it wont affect y axis 
+// Comment out top so it wont affect y axis
 function setRandomPosition(element) {
   const screenWidth = window.innerWidth;
   // const screenHeight = window.innerHeight;
@@ -20,14 +20,6 @@ function onload() {
 
   // * Reading time
   let article = document.querySelector("article");
-
-  /* Straits Times: blocks extension
-  if (!article) {
-    article = document.querySelector(".article-content-rawhtml");
-  }
-  */
-
-  console.log(`article: ${article}`);
 
   // `document.querySelector` may return null if the selector doesn't match anything.
   if (article) {

@@ -62,15 +62,6 @@ async function toggleFocusMode() {
   }
 }
 
-function toggleTimeTracker() {
-  console.log("toggleTimeTracker");
-  chrome.action.setPopup({
-    popup: isTimeTrackerDisplayed ? "popup.html" : "tracker.html",
-  });
-  chrome.action.openPopup();
-  isTimeTrackerDisplayed = !isTimeTrackerDisplayed;
-}
-
 /**
  * Clear local storage and initialize values
  */
