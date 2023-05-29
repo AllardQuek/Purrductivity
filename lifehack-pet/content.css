@@ -2,11 +2,17 @@
   0% {
     transform: translateX(0);
   }
+  25% {
+    transform: translateX(-10rem);
+  }
   50% {
-    transform: translateX(-5rem);
+    transform: translateX(-10rem) scaleX(-1);
+  }
+  75% {
+    transform: translateX(0) (-1);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) scaleX(-1);
   }
 }
 
@@ -19,10 +25,36 @@
   background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat.gif");
   background-repeat: no-repeat;
   background-size: 4rem 4rem;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
 
   /* Cat's position should allow movement across the browser */
   position: fixed;
-  animation: move-back-and-forth 3s linear infinite;
+  animation: move-back-and-forth 5s linear infinite;
+  transform: perspective(600px) rotateY(20deg);
+}
+
+/* Make pet interactive when mouse hover over*/
+.pet:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.pet.clicked .speech-bubble {
+  display: block;
+  /* Add any styles for the speech bubble when clicked */
+}
+
+.speech-bubble {
+  display: none;
+  position: absolute;
+  top: -50px; /* Adjust the positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .reading-time {
