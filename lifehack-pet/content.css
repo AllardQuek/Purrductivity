@@ -36,7 +36,7 @@
 
 /* Make pet interactive when mouse hover over*/
 .pet:hover::before {
-  content: "❤️"; 
+  content: attr(data-emoji);
   display: inline-block;
   font-size: 2rem;
   position: absolute;

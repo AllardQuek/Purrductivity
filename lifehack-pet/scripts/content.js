@@ -18,6 +18,19 @@ function onload() {
   // Set the initial random position for the pet
   setRandomPosition(petElement);
 
+  const emojis = ["❤️", "🚀", "🤩", "😳", "🥰", "💩"];
+
+  pet.addEventListener("mouseover", () => {
+    const randomIndex = Math.floor(Math.random() * emojis.length);
+    const randomEmoji = emojis[randomIndex];
+    pet.setAttribute("data-emoji", randomEmoji);
+  });
+
+  // Clear the emoji when the mouse moves away
+  pet.addEventListener("mouseout", () => {
+    pet.removeAttribute("data-emoji");
+  });
+
   // * Reading time
   let article = document.querySelector("article");
 
