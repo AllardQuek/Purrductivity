@@ -22,7 +22,6 @@
   height: 4rem;
   width: 4rem;
   z-index: 1000;
-  background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat.gif");
   background-repeat: no-repeat;
   background-size: 4rem 4rem;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
@@ -34,6 +33,18 @@
   transform: perspective(600px) rotateY(20deg);
 }
 
+/* Randomly select background image */
+.pet.cat {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat.gif");
+}
+
+.pet.trump1 {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/trump1.gif");
+}
+
+.pet.trump2 {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/trump2.gif");
+}
 /* Make pet interactive when mouse hover over*/
 .pet:hover::before {
   content: attr(data-emoji);
