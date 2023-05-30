@@ -10,11 +10,29 @@ Google Colab's [Kitty mode](https://twitter.com/i/status/1148286772863856642) ðŸ
 - Documentation to run the code locally from Google [here](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
 <img src="doc-image/1.png" width="700">
 
+- Use `Ctrl/CMD + B` to open the extension popup
+<img width="170" alt="image" src="https://github.com/AllardQuek/Purrductivity/assets/40263305/ccea819f-ae2f-4b37-8913-15393b4ac995">
+
+
 ## Features
-1. Reading Time Estimator: estimates the reading time for certain webpages [Medium](https://medium.com/), [Channel NewsAsia](https://www.channelnewsasia.com/), [NUSNews](https://news.nus.edu.sg/)
-2. Time Tracker: tracks time spent on different pages
-3. Focus Mode: hides miscellaneous or distracting elements on certain webpages [Medium](https://medium.com/), [Straits Times](https://www.straitstimes.com/), [NUSNews](https://news.nus.edu.sg/)
-4. Duplicate Tabs: duplicates the current active tab
+### 1. Reading Time Estimator
+Estimates the reading time for certain webpages ([Medium](https://medium.com/), [Channel NewsAsia](https://www.channelnewsasia.com/), [NUSNews](https://news.nus.edu.sg/))
+<img width="717" alt="image" src="https://github.com/AllardQuek/Purrductivity/assets/40263305/6c265ed1-c78c-44fd-a07f-159e250cfa40">
+
+
+### 2. Time Tracker
+Tracks time spent on different pages: `Ctrl/CMD + B > Click "View Time Traker"`
+
+<img width="417" alt="image" src="https://github.com/AllardQuek/Purrductivity/assets/40263305/d7586ac2-f02e-4cc0-bc32-61372c455607">
+
+### 3. Focus Mode
+Hides miscellaneous or distracting elements on certain webpages [Medium](https://medium.com/), [Straits Times](https://www.straitstimes.com/), [NUSNews](https://news.nus.edu.sg/): `Alt/Option + Shift + 1`
+
+<img width="1440" alt="image" src="https://github.com/AllardQuek/Purrductivity/assets/40263305/fbcd1713-e9bb-40c2-ab7d-eac12c570937">
+
+
+### 4. Duplicate Tabs
+Duplicates the current active tab: `Alt/Option + Shift + 2`
 
 ## How we built it
 Javascript, HTML, CSS
