@@ -11,9 +11,9 @@ Google Colab's [Kitty mode](https://twitter.com/i/status/1148286772863856642) ðŸ
 <img src="doc-image/1.png" width="700">
 
 ## Features
-1. Reading Time Estimator: estimates the reading time for certain webpages ([Medium]([url](https://medium.com/)), [Channel NewsAsia]([url](https://www.channelnewsasia.com/)), [NUSNews]([url](https://news.nus.edu.sg/)))
+1. Reading Time Estimator: estimates the reading time for certain webpages [Medium](https://medium.com/), [Channel NewsAsia](https://www.channelnewsasia.com/), [NUSNews](https://news.nus.edu.sg/)
 2. Time Tracker: tracks time spent on different pages
-3. Focus Mode: hides miscellaneous or distracting elements on certain webpages ([Medium]([url](https://medium.com/)), [Straits Times]([url](https://www.straitstimes.com/)), [NUSNews]([url](https://news.nus.edu.sg/)))
+3. Focus Mode: hides miscellaneous or distracting elements on certain webpages [Medium](https://medium.com/), [Straits Times](https://www.straitstimes.com/), [NUSNews](https://news.nus.edu.sg/)
 4. Duplicate Tabs: duplicates the current active tab
 
 ## How we built it
