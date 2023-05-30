@@ -13,6 +13,11 @@ function setRandomPosition(element) {
 function onload() {
   const pet = document.createElement("div");
   pet.classList.add("pet");
+  // Randomly assign class for background image
+  var classNames = ["cat", "trump1", "trump2"];
+  var randomIndex = Math.floor(Math.random() * classNames.length);
+  var selectedClass = classNames[randomIndex];
+  pet.classList.add(selectedClass);
   document.body.appendChild(pet);
   const petElement = document.querySelector(".pet");
   // Set the initial random position for the pet
