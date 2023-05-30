@@ -4,6 +4,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <style>
       body {
+        min-width: 25rem;
         background-image: linear-gradient(
           to bottom right,
           rgb(10, 10, 63),
@@ -33,12 +34,12 @@
       }
 
       #myTable {
+        min-width: 25rem;
         font-family: system-ui;
-        width: 50%;
         margin-top: 3%;
         background: black;
         border-radius: 2px;
-        height: 100%;
+        min-height: 10%;
         color: green;
         font-size: 1rem;
         border-color: black;
@@ -56,16 +57,11 @@
         class="nav-bar nav d-flex justify-content-center"
         style="margin: 1rem"
       >
-        <h1>Time Tracker</h1>
-        <img
-          src="./images/time.png"
-          alt="time"
-          style="height: 2rem; width: 2rem; margin-left: 0.4rem"
-        />
+        <h1>Time Tracker <img src="./images/time.png" alt="time" style="height: 2rem; width: 2rem; margin-left: 0.4rem" /></h1>
       </div>
       <div
         class="container-fluid d-flex justify-content-center"
-        style="min-height: 100vh"
+        style="min-height: 50%"
       >
         <table id="myTable" class="table table-hover table-sm">
           <thead>

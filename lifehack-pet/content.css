@@ -35,9 +35,14 @@
 }
 
 /* Make pet interactive when mouse hover over*/
-.pet:hover {
-  opacity: 0.8;
-  transform: scale(1.1);
+.pet:hover::before {
+  content: attr(data-emoji);
+  display: inline-block;
+  font-size: 2rem;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .pet.clicked .speech-bubble {
