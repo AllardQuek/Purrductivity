@@ -1,0 +1,37 @@
+body {
+  min-width: 25rem;
+  background-image: linear-gradient(to bottom right, rgb(10, 10, 63), black);
+  color: green;
+}
+
+.bottom-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+tr {
+  text-align: center;
+  font-family: monospace;
+}
+
+#bodyCard {
+  width: 100%;
+  background-image: linear-gradient(to bottom right, rgb(0, 255, 13), yellow);
+}
+
+#myTable {
+  min-width: 25rem;
+  font-family: system-ui;
+  margin-top: 3%;
+  background: black;
+  border-radius: 2px;
+  min-height: 10%;
+  color: green;
+  font-size: 1rem;
+  border-color: black;
+}
+
+#collectionDate {
+  color: green !important;
+}
