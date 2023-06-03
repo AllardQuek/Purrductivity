@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message === "updatePet") {
     console.log(`Message: ${request.message}`);
     updatePet();
-    sendResponse({ status: "image update success" });
+    sendResponse({ status: "Image update success" });
   }
 });
 
@@ -45,11 +45,25 @@ function setRandomPosition(element) {
 function onload() {
   const pet = document.createElement("div");
   pet.classList.add("pet");
-  // Randomly assign class for background image
-  let classNames = ["cat", "trump1", "trump2"];
-  let randomIndex = Math.floor(Math.random() * classNames.length);
-  let selectedClass = classNames[randomIndex];
-  pet.classList.add(selectedClass);
+
+  // Check if there is a selected image option from the storage mechanism
+  chrome.storage.local.get(["selectedImage"], function (result) {
+    // Get the selected image option from the storage mechanism
+    let { selectedImage } = result;
+    console.log("Selected image: " + selectedImage);
+
+    if (!selectedImage) {
+      // Randomly assign class for background image
+      const classNames = ["cat", "trump1", "trump2"];
+      const randomIndex = Math.floor(Math.random() * classNames.length);
+      selectedImage = classNames[randomIndex];
+      console.log(`Randomly selected image: ${selectedImage}`);
+    }
+
+    // Add the pet class and the selected image class to the pet element
+    pet.classList.add("pet", selectedImage);
+  });
+
   document.body.appendChild(pet);
   const petElement = document.querySelector(".pet");
   // Set the initial random position for the pet
