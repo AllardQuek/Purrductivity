@@ -1,10 +1,14 @@
 // Listen for messages from the popup script
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-  console.log("Message received: " + message.message);
-  // Check if the message is the "updatePet" message
-  if (message.message === "updatePet") {
-    // Perform actions to update the pet in the content script
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  console.log(
+    sender.tab
+      ? "from a content script:" + sender.tab.url
+      : "from the extension"
+  );
+  if (request.message === "updatePet") {
+    console.log(`Message: ${request.message}`);
     updatePet();
+    sendResponse({ status: "image update success" });
   }
 });
 
