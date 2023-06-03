@@ -1,0 +1,98 @@
+html {
+  min-height: 5em;
+  min-width: 10em;
+  background: linear-gradient(
+    91.9deg,
+    rgb(93, 248, 219) 27.8%,
+    rgb(33, 228, 246) 67%
+  );
+}
+
+body {
+  text-align: center;
+}
+
+/* Align table in the center */
+table {
+  margin: 1rem auto;
+}
+
+img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@keyframes move-back-and-forth {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10rem);
+  }
+  50% {
+    transform: translateX(-10rem) scaleX(-1);
+  }
+  75% {
+    transform: translateX(0) (-1);
+  }
+  100% {
+    transform: translateX(0) scaleX(-1);
+  }
+}
+
+.pet {
+  top: 10%;
+  right: 5%;
+  height: 4rem;
+  width: 4rem;
+  z-index: 1000;
+  background-repeat: no-repeat;
+  background-size: 4rem 4rem;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+
+  /* Cat's position should allow movement across the browser */
+  position: fixed;
+  animation: move-back-and-forth 5s linear infinite;
+  transform: perspective(600px) rotateY(20deg);
+}
+
+/* Randomly select background image */
+.pet.cat {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat.gif");
+}
+
+.pet.trump1 {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/trump1.gif");
+}
+
+.pet.trump2 {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/trump2.gif");
+}
+/* Make pet interactive when mouse hover over*/
+.pet:hover::before {
+  content: attr(data-emoji);
+  display: inline-block;
+  font-size: 2rem;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pet.clicked .speech-bubble {
+  display: block;
+  /* Add any styles for the speech bubble when clicked */
+}
+
+.speech-bubble {
+  display: none;
+  position: absolute;
+  top: -50px; /* Adjust the positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}

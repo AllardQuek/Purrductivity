@@ -1,3 +1,31 @@
+// Listen for messages from the popup script
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+  console.log("Message received: " + message.message);
+  // Check if the message is the "updatePet" message
+  if (message.message === "updatePet") {
+    // Perform actions to update the pet in the content script
+    updatePet();
+  }
+});
+
+function updatePet() {
+  // Get the selected image option from the storage mechanism
+  chrome.storage.local.get(["selectedImage"], function (result) {
+    // Get the selected image option from the storage mechanism
+    const { selectedImage } = result;
+    console.log("Selected image: " + selectedImage);
+
+    // Get the pet element
+    const pet = document.querySelector(".pet");
+
+    // Remove all classes from the pet element
+    pet.classList.remove(...pet.classList);
+
+    // Add the pet class and the selected image class to the pet element
+    pet.classList.add("pet", selectedImage);
+  });
+}
+
 // Comment out top so it wont affect y axis
 function setRandomPosition(element) {
   const screenWidth = window.innerWidth;
@@ -14,9 +42,9 @@ function onload() {
   const pet = document.createElement("div");
   pet.classList.add("pet");
   // Randomly assign class for background image
-  var classNames = ["cat", "trump1", "trump2"];
-  var randomIndex = Math.floor(Math.random() * classNames.length);
-  var selectedClass = classNames[randomIndex];
+  let classNames = ["cat", "trump1", "trump2"];
+  let randomIndex = Math.floor(Math.random() * classNames.length);
+  let selectedClass = classNames[randomIndex];
   pet.classList.add(selectedClass);
   document.body.appendChild(pet);
   const petElement = document.querySelector(".pet");
