@@ -1,9 +1,0 @@
-.ssh-pet {
-    height: 100px;
-    width: 100px;
-    position: fixed;
-    z-index: 1000;
-    background-image: url("chrome-extension://__MSG_@@extension_id__/pets/crocs.gif");
-    background-size: 100px 100px;
-    background-position: 0 0;
-  }
