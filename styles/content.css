@@ -38,6 +38,14 @@
   background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat.gif");
 }
 
+.pet.cat1 {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat1.jpg");
+}
+
+.pet.cat2 {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/cat2.gif");
+}
+
 .pet.trump1 {
   background-image: url("chrome-extension://__MSG_@@extension_id__/images/trump1.gif");
 }
@@ -71,8 +79,4 @@
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.reading-time {
-  color: #666;
 }

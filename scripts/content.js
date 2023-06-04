@@ -54,7 +54,7 @@ function onload() {
 
     if (!selectedImage) {
       // Randomly assign class for background image
-      const classNames = ["cat", "trump1", "trump2"];
+      const classNames = ["cat", "cat1", "cat2", "trump1", "trump2"];
       const randomIndex = Math.floor(Math.random() * classNames.length);
       selectedImage = classNames[randomIndex];
       console.log(`Randomly selected image: ${selectedImage}`);
@@ -81,30 +81,6 @@ function onload() {
   pet.addEventListener("mouseout", () => {
     pet.removeAttribute("data-emoji");
   });
-
-  // * Reading time
-  let article = document.querySelector("article");
-
-  // `document.querySelector` may return null if the selector doesn't match anything.
-  if (article) {
-    const text = article.textContent;
-    const wordMatchRegExp = /[^\s]+/g;
-    const words = text.matchAll(wordMatchRegExp);
-
-    // matchAll returns an iterator, convert to array to get word count
-    const wordCount = [...words].length;
-    const readingTime = Math.round(wordCount / 200);
-    console.log(`readingTime: ${readingTime}`);
-    const badge = document.createElement("p");
-
-    // Use the same styling as the publish information in an article's header
-    badge.classList.add("reading-time");
-    badge.textContent = `⏱️ ${readingTime} min read`;
-
-    // display reading time below header
-    const heading = document.querySelector("h1");
-    heading.insertAdjacentElement("afterend", badge);
-  }
 }
 
 window.addEventListener("load", onload);
