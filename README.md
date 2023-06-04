@@ -20,7 +20,7 @@ Duplicates the current active tab: `Alt/Option + Shift + 2`
 
 ### 2. Select Companion
 
-Open the extension window using `Ctrl/CMD + B` and select a companion to appear on the screen
+Open the extension window using `Alt/Option + 1` and select a companion to appear on the screen
 
 ## How we built it
 

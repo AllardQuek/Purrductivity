@@ -34,7 +34,7 @@
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Ctrl + B"
+        "default": "Alt+Shift+1"
       },
       "description": "Opens the extension popup"
     },
