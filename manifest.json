@@ -29,6 +29,7 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "host_permissions": ["<all_urls>"],
   "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "commands": {
     "_execute_action": {
