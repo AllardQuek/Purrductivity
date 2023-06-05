@@ -44,7 +44,6 @@ function setRandomPosition(element) {
 // * Show pet
 function onload() {
   const pet = document.createElement("div");
-  pet.classList.add("pet");
 
   // Check if there is a selected image option from the storage mechanism
   chrome.storage.local.get(["selectedImage"], function (result) {
@@ -64,10 +63,8 @@ function onload() {
     pet.classList.add("pet", selectedImage);
   });
 
+  setRandomPosition(pet);
   document.body.appendChild(pet);
-  const petElement = document.querySelector(".pet");
-  // Set the initial random position for the pet
-  setRandomPosition(petElement);
 
   const emojis = ["❤️", "🚀", "🤩", "😳", "🥰", "💩"];
 
