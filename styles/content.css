@@ -53,6 +53,7 @@
 .pet.trump2 {
   background-image: url("chrome-extension://__MSG_@@extension_id__/images/trump2.gif");
 }
+
 /* Make pet interactive when mouse hover over*/
 .pet:hover::before {
   content: attr(data-emoji);

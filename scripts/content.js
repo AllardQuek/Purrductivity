@@ -59,7 +59,6 @@ function onload() {
       console.log(`Randomly selected image: ${selectedImage}`);
     }
 
-    // Add the pet class and the selected image class to the pet element
     pet.classList.add("pet", selectedImage);
   });
 
