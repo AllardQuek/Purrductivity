@@ -30,7 +30,7 @@
     "default_popup": "popup.html"
   },
   "host_permissions": ["<all_urls>"],
-  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "permissions": ["activeTab", "storage", "tabs"],
   "commands": {
     "_execute_action": {
       "suggested_key": {
